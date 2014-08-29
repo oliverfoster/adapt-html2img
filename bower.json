@@ -1,0 +1,14 @@
+{
+  "name": "adapt-html2img",
+  "homepage": "https://github.com/cgkineo/adapt-html2img",
+  "authors": [
+    "Oliver Foster <oliver.foster@kineo.com"
+  ],
+  "description": "%description",
+  "main": "/js/adapt-html2img.js",
+  "keywords": [
+    "adapt-plugin",
+    "adapt-extension"
+  ],
+  "license": "GPLv3"
+}
