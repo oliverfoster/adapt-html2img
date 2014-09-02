@@ -5,7 +5,7 @@ Render html to a data url "data:image/png;base64,...." and use alternative css t
 
 Formation:
 ```
-[window.]html2img($jqueryElement, callbackFunction);
+[window.]html2img($jqueryElement, callbackFunction, preRenderFunction);
 ```
 
 Example:
@@ -14,6 +14,10 @@ html2img( $(".selector"), function(dataurl) {
 
 	var img = $("<img>").attr("src", dataurl);
 	$("body").append(img);
+
+}, function(clone) {
+
+	//clone of original element used for rendering
 
 });
 ```
