@@ -1,3 +1,8 @@
+/*
+* adapt-html2img
+* License - http://github.com/adaptlearning/adapt_framework/LICENSE
+* Maintainers - Oliver Foster <oliver.foster@kineo.com>
+*/
 
 _html2canvas.Util.Bounds = function (element) {
   //return this.OffsetBounds(element);
