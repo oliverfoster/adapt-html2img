@@ -1232,7 +1232,14 @@ _html2canvas.Parse = function (images, options) {
 
       textList.forEach(function(text, index) {
         var bounds = getTextBounds(state, text, textDecoration, (index < textList.length - 1), stack.transform.matrix);
-        if (bounds) {
+        if (bounds) { //FIX FOR IPAD MINI MISPLACEMENT
+          if (bounds.top - $(window).scrollTop() > 0) {
+            var b = _html2canvas.Util.Bounds($(state.node).parent()[0]);
+            var n = _.extend({}, bounds);
+            n.top =  (bounds.top - ($(window).scrollTop() + b.top)) + b.top;
+            n.bottom = n.top + bounds.height;
+            bounds = n;
+          }
           drawText(text, bounds.left, bounds.bottom, ctx);
           renderTextDecoration(ctx, textDecoration, bounds, metrics, color);
         }

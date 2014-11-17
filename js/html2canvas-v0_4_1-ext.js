@@ -15,9 +15,9 @@ _html2canvas.Util.Bounds = function (element) {
     bounds.top = clientRect.top;
     bounds.bottom = (clientRect.top + element.offsetHeight);
     bounds.left = clientRect.left;
-
     bounds.width = element.offsetWidth;
     bounds.height = element.offsetHeight;
+    bounds.right = bounds.left + bounds.width;
   }
 
   return bounds;
